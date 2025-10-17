@@ -29,8 +29,11 @@
         private void InitializeComponent()
         {
             button1 = new Button();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            Num1Input = new TextBox();
+            Num2Input = new TextBox();
+            ResultBox = new TextBox();
+            label1 = new Label();
+            label2 = new Label();
             SuspendLayout();
             // 
             // button1
@@ -43,27 +46,55 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // textBox1
+            // Num1Input
             // 
-            textBox1.Location = new Point(48, 53);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 27);
-            textBox1.TabIndex = 1;
+            Num1Input.Location = new Point(48, 53);
+            Num1Input.Name = "Num1Input";
+            Num1Input.Size = new Size(125, 27);
+            Num1Input.TabIndex = 1;
             // 
-            // textBox2
+            // Num2Input
             // 
-            textBox2.Location = new Point(217, 53);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(125, 27);
-            textBox2.TabIndex = 2;
+            Num2Input.Location = new Point(235, 53);
+            Num2Input.Name = "Num2Input";
+            Num2Input.Size = new Size(125, 27);
+            Num2Input.TabIndex = 2;
+            // 
+            // ResultBox
+            // 
+            ResultBox.Location = new Point(424, 53);
+            ResultBox.Name = "ResultBox";
+            ResultBox.Size = new Size(125, 27);
+            ResultBox.TabIndex = 3;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(179, 56);
+            label1.Name = "label1";
+            label1.Size = new Size(15, 20);
+            label1.TabIndex = 4;
+            label1.Text = "/";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(366, 56);
+            label2.Name = "label2";
+            label2.Size = new Size(19, 20);
+            label2.TabIndex = 5;
+            label2.Text = "=";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(ResultBox);
+            Controls.Add(Num2Input);
+            Controls.Add(Num1Input);
             Controls.Add(button1);
             Name = "Form1";
             Text = "Exception Handling";
@@ -74,7 +105,10 @@
         #endregion
 
         private Button button1;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox Num1Input;
+        private TextBox Num2Input;
+        private TextBox ResultBox;
+        private Label label1;
+        private Label label2;
     }
 }
