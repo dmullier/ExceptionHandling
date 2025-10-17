@@ -15,8 +15,16 @@ namespace ExceptionHandling
         public void divide()
         {
             int num1, num2, result;
-            num1 = Int32.Parse(Num1Input.Text);
-            num2 = Int32.Parse(Num2Input.Text);
+            try
+            {
+                num1 = Int32.Parse(Num1Input.Text);
+                num2 = Int32.Parse(Num2Input.Text);
+            }
+            catch (FormatException)
+            {
+                ResultBox.Text = "Invalid Entry";
+                return;
+            }
             result = num1 / num2;
             ResultBox.Text = result.ToString();
         }
