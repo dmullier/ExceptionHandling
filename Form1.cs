@@ -25,6 +25,15 @@ namespace ExceptionHandling
                 ResultBox.Text = "Invalid Entry";
                 return;
             }
+            try
+            {
+                result = num1 / num2;
+            }
+            catch (DivideByZeroException)
+            {
+                ResultBox.Text = "Cannot divide by zero";
+                return;
+            }
             result = num1 / num2;
             ResultBox.Text = result.ToString();
         }
