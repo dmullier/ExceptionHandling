@@ -18,11 +18,19 @@ namespace ExceptionHandling
             try
             {
                 num1 = Int32.Parse(Num1Input.Text);
+            }
+            catch (FormatException)
+            {
+                ResultBox.Text = "Invalid Entry1";
+                return;
+            }
+            try
+            { 
                 num2 = Int32.Parse(Num2Input.Text);
             }
             catch (FormatException)
             {
-                ResultBox.Text = "Invalid Entry";
+                ResultBox.Text = "Invalid Entry2";
                 return;
             }
             try
