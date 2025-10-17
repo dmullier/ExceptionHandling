@@ -40,14 +40,24 @@ namespace ExceptionHandling
             catch (DivideByZeroException)
             {
                 ResultBox.Text = "Cannot divide by zero";
-                return;
+                System.InvalidOperationException ex = new System.InvalidOperationException("you tried to divide " + num1 + " by " + num2);
+                throw ex;
+               
             }
             result = num1 / num2;
             ResultBox.Text = result.ToString();
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            divide();
+            try
+            {
+                divide();
+            }
+            catch (InvalidOperationException ex)
+            {
+                MessageBox.Show("An error occured "+ex.Message);
+            }
+            
         }
 
        
